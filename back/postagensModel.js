@@ -5,18 +5,28 @@ const postagensSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  texto: {
+  subtitulo: {
     type: String,
     required: true,
   },
-  // comentarios: {
-  //   type: [{
-  //   nome: String, 
-  //   texto: String
-  //   }],
-  //   default: []
-  // }
-  comentarios: [{nome: String, texto: String}]
+  introducao: {
+    type: String,
+    required: true
+  },
+  desenvolvimento: {
+    titulo: String,
+    corpo: String
+  },
+  conclusao: {
+    titulo: String, 
+    corpo: String,
+  },
+  comentarios: [{
+    nome: String, texto: String
+  }],
+  autor: {
+    type: String, 
+    required: true}
 })
 
 mongoose.model('postagens', postagensSchema)
