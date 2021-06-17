@@ -5,7 +5,7 @@
         </div>
     </nav>
     <!-- Page Header-->
-    <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+    <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
@@ -39,9 +39,9 @@
                   </p>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                  <h3>Deixe seu comentario</h3>
+                  <h3 class="margin-bottom-xs">Deixe seu comentario</h3>
                   <div *ngFor="let comentario of this.postagem.comentarios">
-                    <p>{{comentario.nome}}</p>
+                    <h5>{{comentario.nome}}</h5>
                     <p>{{comentario.texto}}</p>
                   </div>
                   <form *ngIf="this.comentarioForm" class="form-inline" [formGroup]="comentarioForm">
